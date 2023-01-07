@@ -1,15 +1,14 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+import Image from "next/image";
+import { Inter } from "@next/font/google";
+import styles from "./page.module.css";
 
-import Link from 'next/link'
+import Link from "next/link";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Link href="/about" >about</Link>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -21,7 +20,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            By{" "}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -33,7 +32,9 @@ export default function Home() {
           </a>
         </div>
       </div>
-
+      <div style={{ border: "crimson solid 1px" }}>
+        <Link href="/contact">contact</Link>
+      </div>
       <div className={styles.center}>
         <Image
           className={styles.logo}
@@ -88,7 +89,10 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
+        <button className={styles.card} style={{ cursor: "pointer" }}>
+          Hello world
+        </button>
       </div>
     </main>
-  )
+  );
 }
