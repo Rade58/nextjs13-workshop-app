@@ -1,7 +1,16 @@
-import type { NextPage as NP } from "next";
+const getData = async () => {
+  const data = await fetch("https://reddit.com/.json", {
+    /* cache: "no-store" */
+  });
+  return data.json();
+};
 
-const AboutPage: NP = () => {
-  return <div>About 👾</div>;
+const AboutPage = async () => {
+  const data = await getData();
+
+  const post = data.data.children[0].data.title;
+
+  return <div>{post}</div>;
 };
 
 export default AboutPage;
