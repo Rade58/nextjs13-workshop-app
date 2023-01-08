@@ -26,7 +26,7 @@ const getdataFromCms = async (slug: string) => {
 const BlogPostPage = async ({ params }: { params: any }) => {
   const data = await getdataFromCms(params.slug);
 
-  throw new Error("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOPS");
+  // throw new Error("OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOPS");
   return <div>Blog Post Page {JSON.stringify(data.kind, null, 2)}</div>;
 };
 
