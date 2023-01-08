@@ -1,9 +1,9 @@
 "use client";
 
-const ErrorBlogPost = ({ error }: { error: any }) => {
+const ErrorBlogPost = ({ error }: { error: Error }) => {
   console.log(error);
 
-  return <div>oooooops 👾</div>;
+  return <div>oooooops 👾 {error.message}!</div>;
 };
 
 export default ErrorBlogPost;
