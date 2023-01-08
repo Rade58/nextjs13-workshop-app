@@ -9,10 +9,17 @@ import { useRouter } from "next/router";
   ];
 }; */
 
-const BlogPostPage = async ({ params }: { params: any }) => {
-  console.log({ params });
+const getdataFromCms = async (slug: string) => {
+  // IT WOULD GO SOMETHING LIKE THIS
+  // await fetch(slug)
+  const res = await fetch("https://reddit.com/.json");
+  return res.json();
+};
 
-  return <div>Blog Post Page {JSON.stringify(params, null, 2)}</div>;
+const BlogPostPage = async ({ params }: { params: any }) => {
+  const data = await getdataFromCms(params.slug);
+
+  return <div>Blog Post Page {JSON.stringify(data, null, 2)}</div>;
 };
 
 export default BlogPostPage;
