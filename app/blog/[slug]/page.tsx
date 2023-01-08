@@ -1,5 +1,5 @@
-import type { NextPage as NP } from "next";
-import { useRouter } from "next/router";
+// import type { NextPage as NP } from "next";
+// import { useRouter } from "next/router";
 
 // THIS DOESN'T BELONG HERE
 /* export const generateStaticParams = async () => {
