@@ -1,5 +1,5 @@
-const loading = () => {
-  return <div>loading 👾</div>;
+const LoadingBlogPost = () => {
+  return <div>Loading Blog Post 👾 (show skeleton)</div>;
 };
 
-export default loading;
+export default LoadingBlogPost;

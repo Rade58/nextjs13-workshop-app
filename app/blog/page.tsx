@@ -1,3 +1,5 @@
+// YOU EXPORT THESE FROM HERE (AND THESE ARE GOING TO BE AVAILABLE INSIDE
+// PAGES /blog:slug)
 export const generateStaticParams = async () => {
   return [
     { slug: "learn-types" },
